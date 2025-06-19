@@ -1,10 +1,10 @@
 {
   "name": "expense-tracker-server",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "src/server.js",
   "scripts": {
     "build": "tsc && prisma generate",
-    "start": "node dist/server.js",
+    "start": "node src/server.js",
     "dev": "ts-node-dev src/server.ts"
   },
   "dependencies": {
