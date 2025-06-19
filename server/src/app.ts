@@ -9,7 +9,7 @@ import { Router } from "express";
 const app = express();
 app.use(cors(), express.json());
 app.use("/auth", authRouter);
-app.use(authMiddleware);
+app.use((req, res, next) => authMiddleware(req as any, res, next));
 app.use("/expenses", expenseRouter);
 app.use("/budget", budgetRouter);
 export default app;
